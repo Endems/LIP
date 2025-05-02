@@ -1,12 +1,17 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { CoreModule } from './core/core.module';
+import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  standalone: true, // Mark as standalone
+  imports: [CoreModule],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'LIP';
+
+  ngOnInit() {
+    initFlowbite()
+  }
 }
