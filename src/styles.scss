@@ -24,4 +24,12 @@
     color: var(--secondary-color); // Use a variável CSS
   }
 
+  .text-muted-white {
+    color: rgba(255, 255, 255, 0.5); // Use a variável CSS
+  }
+
+  .text-muted-black {
+    color: rgba(0, 0, 0, 0.5); // Use a variável CSS
+  }
+
 }
