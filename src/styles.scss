@@ -1,4 +1,27 @@
 @use "tailwindcss";
-@theme {
-  --primary-color: #3490dc;
+
+
+/* Defina a variável no escopo do Tailwind */
+@layer base {
+  :root {
+    --primary-color: #46ae94; // Defina o valor da cor desejada
+    --secondary-color: #023248;  // Defina o valor da cor desejada
+  }
+
+  .bg-primary {
+    background-color: var(--primary-color); // Use a variável CSS
+  }
+
+  .bg-secondary {
+    background-color: var(--secondary-color); // Use a variável CSS
+  }
+
+  .text-primary {
+    color: var(--primary-color); // Use a variável CSS
+  }
+
+  .text-secondary {
+    color: var(--secondary-color); // Use a variável CSS
+  }
+
 }

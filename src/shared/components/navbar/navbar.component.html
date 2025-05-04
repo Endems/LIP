@@ -1,10 +1,11 @@
 <nav class="bg-white fixed w-full z-20 top-0 start-0 text-black shadow-md">
   <div class="ml-10 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
-    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <span class="self-center text-2xl font-semibold whitespace-nowrap text-green-600">Lf Inspeções e Pericias</span>
+    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse flex-col">
+        <span class="self-center text-3xl font-semibold whitespace-nowrap text-primary">LF</span>
+        <span class="self-center text-sm font-semibold whitespace-nowrap text-secondary">Inspeções & Pericias</span>
     </a>
     <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-        <button href="#contact" type="button" class="hidden md:block cursor-pointer text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
+        <button href="#contact" type="button" class="hidden md:block cursor-pointer text-white bg-primary hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
           Entrar em contato
         </button>
         <button data-collapse-toggle="navbar-sticky" type="button"
@@ -23,8 +24,8 @@
           <ng-container *ngFor="let item of menuOptions">
             <li [ngClass]="item.only_sm ? 'md:hidden' : ''">
               <a href="{{item.link}}"
-              class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-green-100
-              md:hover:bg-transparent md:hover:text-green-800 md:p-0">{{ item.name }}</a>
+              class="block py-2 px-3 text-secondary rounded-sm hover:bg-green-100
+              md:hover:bg-transparent md:hover:text-(--primary-color) md:p-0">{{ item.name }}</a>
             </li>
           </ng-container>
       </ul>
