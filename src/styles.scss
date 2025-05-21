@@ -1,11 +1,25 @@
 @use "tailwindcss";
 
+$font-primary: 'Montserrat', sans-serif;
+$font-color: #333333;
+
+body {
+  font-family: $font-primary;
+  font-weight: 400;
+  font-style: normal;
+  color: $font-color;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+
 
 /* Defina a variável no escopo do Tailwind */
 @layer base {
   :root {
-    --primary-color: #46ae94; // Defina o valor da cor desejada
-    --secondary-color: #023248;  // Defina o valor da cor desejada
+    --primary-color: #023248; // Defina o valor da cor desejada
+    --secondary-color: #46AE94;  // Defina o valor da cor desejada
+    --time-of-animation: 0.5s; // Defina o valor da cor desejada
   }
 
   .bg-primary {
@@ -32,4 +46,90 @@
     color: rgba(0, 0, 0, 0.5); // Use a variável CSS
   }
 
+
+  .logo-horizontal{
+    *{
+      height: 50px;
+      width: 120px;
+
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    .primary{
+      background-image: url('/horizontal/primary.svg');
+    }
+    .secondary{
+      background-image: url('/horizontal/secondary.svg');
+    }
+    .white{
+      background-image: url('/horizontal/white.svg');
+    }
+    .black{
+      background-image: url('/horizontal/black.svg');
+    }
+  }
+
+  .logo-vertical{
+    * {
+      height: 80px;
+      width: 80px;
+
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    .primary{
+      background-image: url('/vertical/primary.svg');
+    }
+    .secondary{
+      background-image: url('/vertical/secondary.svg');
+    }
+    .white{
+      background-image: url('/vertical/white.svg');
+    }
+    .black{
+      background-image: url('/vertical/black.svg');
+    }
+  }
+
+  .logo-icon{
+    * {
+      height: 50px;
+      width: 50px;
+
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    .primary{
+      background-image: url('/icon/primary.svg');
+    }
+    .secondary{
+      background-image: url('/icon/secondary.svg');
+    }
+    .white{
+      background-image: url('/icon/white.svg');
+    }
+    .black{
+      background-image: url('/icon/black.svg');
+    }
+  }
+
+
+
+   @keyframes left-to-right {
+      0% {
+        transform: translateX(-10px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0px);
+        opacity: 1;
+      }
+    }
 }
+

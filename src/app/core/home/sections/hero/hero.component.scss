@@ -1,0 +1,55 @@
+.hero {
+  width: 100%;
+  height: 600px;
+  padding: 10% 0 0 5%;
+
+    .title{
+      max-width: 450px;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: white;
+      display: flex;
+      gap: 15px;
+      flex-direction: column;
+      animation: left-to-right var(--time-of-animation) ease-in-out normal;
+    }
+
+    .subtitle{
+      max-width: 450px;
+      font-size: 1rem;
+      font-weight: 400;
+      color: white;
+      animation: left-to-right var(--time-of-animation) ease-in-out normal;
+    }
+
+    .buttons{
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+      animation: left-to-right var(--time-of-animation) ease-in-out normal;
+    }
+}
+
+//Animação do background gradiente
+.hero {
+  background: linear-gradient(
+    90deg,
+    var(--secondary-color) 60%,
+    rgba(0, 0, 0, 0) 100%
+  ),
+    url('/hero/bg.jpg') no-repeat 110% center/contain;
+  animation: bg-animation var(--time-of-animation) ease-in-out normal;
+
+}
+
+
+@keyframes bg-animation {
+  0% {
+    background-position: 112% center;
+    opacity: 0.5;
+  }
+  100% {
+    background-position: 110% center;
+    opacity: 1;
+  }
+}
